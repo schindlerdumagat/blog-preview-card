@@ -35,12 +35,22 @@
     align-items: start;
     gap: 24px;
     width: clamp(327px, 40vw, 384px);
-    height: clamp(501px, 40vw, 522px);
+    height: clamp(501px, 68vw, 522px);
     padding: 24px;
     background-color: var(--card-bg-color);
     border-radius: 20px;
     box-shadow: 8px 8px black;
     border: 1px solid var(--text-primary);
+    transition: 0.7s;
+  }
+
+
+  article:hover {
+    box-shadow: 16px 16px black;
+  }
+
+  article:hover .blog-content h1 {
+    color: var(--main-bg-color);
   }
 
   article img {
@@ -70,10 +80,7 @@
   .blog-content h1 {
     font-size: clamp(20px, 5vw, 24px);
     font-weight: 800;
-  }
-
-  .blog-content h1:hover {
-    color: var(--main-bg-color);
+    transition: 0.7s ;
   }
 
   .blog-content p {
