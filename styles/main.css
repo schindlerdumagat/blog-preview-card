@@ -6,105 +6,98 @@
 }
 
 body {
-  font-family: "Figtree", serif;
-}
-
-main {
-  min-height: 100vh;
-  background-color: var(--main-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-primary);
+  font-family: "Figtree", serif;
+  padding: 1.5rem;
+  background-color: var(--main-bg-color);
 }
 
 article {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
   gap: 24px;
-  width: clamp(327px, 40vw, 384px);
-  height: clamp(501px, 68vw, 522px);
-  padding: 24px;
+  max-width: 24rem;
   background-color: var(--card-bg-color);
+  padding: 1.5rem;
+  border: 1px solid var(--text-primary);
   border-radius: 20px;
   box-shadow: 8px 8px black;
-  border: 1px solid var(--text-primary);
-  transition: 0.7s;
-}
-
-article a {
-  text-decoration: none;
-}
-
-article a::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  position: relative;
 }
 
 article:hover {
+  transition: 0.3s;
   box-shadow: 16px 16px black;
 }
 
-article:hover .blog-content h2 {
+article:hover h2 {
+  transition: 0.3s;
   color: var(--main-bg-color);
 }
 
-article img {
+.card-image {
   border-radius: 10px;
 }
 
-.blog-content {
+.card-content {
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 12px;
 }
 
-.blog-content .blog-label {
-  background-color: var(--main-bg-color);
+.card-tag {
   padding: 4px 12px;
+  background-color: var(--main-bg-color);
+  width: fit-content;
   border-radius: 4px;
-  font-size: clamp(12px, 3vw, 14px);
+  font-size: clamp(0.75rem, 0.8px + 2.3vw, 0.875rem);
   font-weight: 800;
 }
 
-.blog-content .blog-date {
-  font-size: clamp(12px, 3vw, 14px);
+.published-date {
+  font-size: clamp(0.75rem, 0.8px + 2.3vw, 0.875rem);
+  font-weight: 500;
 }
 
-.blog-content h2 {
-  font-size: clamp(20px, 5vw, 24px);
+h2 {
+  font-size: clamp(1.25rem, 0.8px + 3.2vw, 1.5rem);;
   font-weight: 800;
-  transition: 0.7s;
 }
 
-.blog-content p {
+h2 a {
+  text-decoration: none;
+}
+
+h2 a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+p {
+  font-size: clamp(0.875rem, 0.8px + 2.3vw, 1rem);
+  font-weight: 500;
   color: var(--text-secondary);
-  font-size: clamp(14px, 3vw, 16px);
 }
 
 .author-container {
   display: flex;
-  justify-content: start;
   align-items: center;
   gap: 12px;
-  width: 129px;
-  height: 32px;
 }
 
-.author-container .avatar-container,
-.author-container .avatar-container img {
-  height: 100%;
+.author-container img {
+  width: 2rem;
 }
 
-.author-container .author-name {
-  font-size: 14px;
+.author-container p {
+  color: var(--text-primary);
   font-weight: 800;
+  font-size: 0.875rem;
 }
