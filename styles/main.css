@@ -144,7 +144,7 @@ body {
   color: var(--main-bg-color);
 }
 
-.card-image {
+.card img {
   border-radius: 10px;
 }
 
