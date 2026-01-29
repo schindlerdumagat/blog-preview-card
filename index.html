@@ -13,9 +13,31 @@
     />
 
     <title>Frontend Mentor | Blog preview card</title>
+    
+    <link rel="preload" href="assets/fonts/figtree-v9-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="assets/fonts/figtree-v9-latin-800.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/style.css">
 
   </head>
   <body>
+
+    <main>
+      <h1 class="sr-only">Sample Blog Preview Card Component</h1>
+      <div class="card">
+        <img src="assets/images/illustration-article.svg" alt="" class="card__img" width="336" height="201">
+        <div class="card__content">
+          <p class="card__tag">Learning</p>
+          <p class="card__published">Published <time datetime="2023-12-21" class="card__published-time">21 Dec 2023</time></p>
+          <h2 class="card__title"><a href="https://www.google.com/" class="card__title-link">HTML & CSS foundations</a></h2>
+          <p class="card__description">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+        </div>
+        <div class="card__author">
+          <img src="assets/images/image-avatar.webp" alt="" class="card__author-img" width="64" height="65">
+          <p class="card__author-name">Greg Hooper</p>
+        </div>
+      </div>
+    </main>
 
   </body>
 </html>
